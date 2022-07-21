@@ -1,6 +1,7 @@
 let pokemons = [];
 let wrapDiv = document.getElementById("wraper");
 let pokeballs = document.getElementById("pokeballs");
+let flag = false;
 
 let firstPokemon = {
   name: "Bulbasaur",
@@ -27,14 +28,16 @@ function render() {
   pokemons.push(firstPokemon, secondPokemon, thirdPokemon);
   console.log(pokemons);
 
-  for (list of pokemons) {
-    wrapDiv.innerHTML += `<div class = "inner-html" onClick = "chosen()">
+  if (!flag) {
+    flag = true;
+    for (list of pokemons) {
+      wrapDiv.innerHTML += `<div class = "inner-html" onClick = "chosen()">
     <div class = "image"> ${list.pic} </div>
     <h2 id = "'${list.name}'" > ${list.name} </h2>
     <p> <span> Type: </span> ${list.type} </p>
     <p> <span> Color: </span> ${list.color} </p>   
     `;
+    }
+    pokeballs.style.display = "none";
   }
-
-  pokeballs.style.display = "none";
 }
