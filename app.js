@@ -6,7 +6,7 @@ let firstPokemon = {
   name: "Bulbasaur",
   color: "Green",
   pic: '<img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png" alt="a cute grass pokemon">',
-  type: "Grass | Poisen",
+  type: "Grass",
 };
 let secondPokemon = {
   name: "Charmander",
